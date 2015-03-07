@@ -12,7 +12,7 @@ def message(obj):
 
 
 screen = pygame.display.set_mode((800, 600))
-networkObj = client.MMOProtocolClient("173.63.75.82", 8080, {"moving":False, "direction":"right", "stats":{"speed":5}, "username":"test", "class":"mage", "animationon":0, "lastanimation":100, "health":100, "energy":100, "attacking":False, "object":(random.randint(50, 500), random.randint(50, 500), 32, 32), "sessionid":__import__("uuid").uuid4().hex, "password":"Test"})
+networkObj = client.MMOProtocolClient("173.63.75.82", 8080, {"moving":False, "direction":"right", "stats":{"speed":5}, "username":"tes", "class":"mage", "animationon":0, "lastanimation":100, "health":100, "energy":100, "attacking":False, "object":(random.randint(50, 500), random.randint(50, 500), 32, 32), "sessionid":__import__("uuid").uuid4().hex, "password":"test"})
 thread.start_new_thread(message, (networkObj,))
 
 while True:

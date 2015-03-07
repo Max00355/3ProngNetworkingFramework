@@ -34,6 +34,8 @@ class MMOProtocolServer:
         sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
         sock.bind((self.host, self.port))
         sock.listen(5)
+        for ai in self.ai:
+            thread.start_new_thread(ai, ())
         while True:
             obj,conn = sock.accept()
             thread.start_new_thread(self.handle, (obj, conn))

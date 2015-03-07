@@ -1,3 +1,6 @@
+import time
 class BasicEnemy:
     def update(self):
-        pass
+        while True:
+            print 'a'
+            time.sleep(0.001)
